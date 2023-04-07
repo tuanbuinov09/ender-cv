@@ -42,8 +42,8 @@ ul{
 }
 
 .left {
-    width: 60mm;
-    background-color: #333;
+    width: 70mm;
+    background-color: #333333;
     color: #eee;
     padding: 20px 20px;
     /* height: 7in; */
@@ -158,9 +158,9 @@ ul{
     content: '';
     background-color: #3c6382;
     height: calc(100% + 50px);
-    width: calc(100% + 60mm);
+    width: calc(100% + 70mm);
     top: -25px;
-    left: -60mm;
+    left: -70mm;
     z-index: -2;
 }
 .title .vertical-rectangle-container{
@@ -211,6 +211,7 @@ ul{
     font-weight: bolder;
     width: 100%;
     margin-bottom: 4px;
+    color: #3C6382;
 }
 .from-to{
     margin-bottom: 4px;
@@ -242,4 +243,9 @@ ul{
 .work-detail-item-start{
     font-weight: bold;
     color: #333;
+}
+
+.no-margin{
+    margin-top: 0;
+    margin-bottom: 4px;
 }
