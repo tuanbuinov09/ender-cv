@@ -157,7 +157,7 @@ ul{
     position: absolute;
     content: '';
     background-color: #3c6382;
-    height: calc(100% + 50px);
+    height: calc(100% + 55px);
     width: calc(100% + 70mm);
     top: -25px;
     left: -70mm;
@@ -185,7 +185,7 @@ ul{
 }
 .title .position{
     margin-top: 10px;
-    margin-bottom: 90px;
+    margin-bottom: 116px;
     /* color: #444; */
     color: #eeeeee;
 }
