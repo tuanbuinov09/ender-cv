@@ -1,3 +1,6 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk&display=swap');
+</style>
 @page {
     size: 210mm 297mm;
     /* margin: 27mm 16mm 27mm 16mm; 297mm*/
@@ -73,10 +76,12 @@ ul{
 }
 .link{
     color: #eee;
-    transition: color .2s ease-out;
+    transition: all .2s ease-out;
+    text-decoration: none;
 }
 .link:hover{
     color: #1d91df;
+    text-decoration: underline;
 }
 .info-list {
     list-style-type: none;
@@ -248,4 +253,9 @@ ul{
 .no-margin{
     margin-top: 0;
     margin-bottom: 4px;
+}
+
+.sub-detail {
+    list-style-type: circle;
+    margin-left: 16px;
 }
