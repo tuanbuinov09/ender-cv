@@ -20,15 +20,17 @@ body{
     top: 0;
 } */
 .main{
-    width: 210mm;
+    display: flex;
+    width: 100%;
     background-color: #fff;
-    padding-right: 20px;
-    border: 1px solid #333;
+    /* padding-right: 20px; */
+    /* border: 1px solid #333; */
 }
+
 html{
     font-family: sans-serif;
     font-size: 14px;
-    color: #111;
+    color: #222;
 }
 h1{
     font-size: 28px;
@@ -45,17 +47,17 @@ ul{
 }
 
 .left {
-    width: 70mm;
+    width: 64mm;
     background-color: #333333;
     color: #eee;
-    padding: 20px 20px;
+    padding: 16px 16px;
     /* height: 7in; */
     height: 297mm;
     z-index: 5;
 }
 .info-title{
     margin: 20px 0 4px 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .info-title-seperator{
@@ -63,10 +65,10 @@ ul{
     display: block;
     height: 1px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 .right .info-title-seperator{
-    width: calc(100% - 10px);
+    width: 100%;
     background-color: #aaa;
 }
 
@@ -146,18 +148,20 @@ ul{
     width: 12px;
     height: 12px;
 }
-.main{
-    display: flex;
-}
+
 .right{
-    width: 150mm;
-    padding: 20px 30px 20px 30px;
+    width: 156mm;
+    padding: 16px 24px 16px 24px;
+    border: 1px solid #333;
+
 }
+
 .right .title{
     position: relative;
     z-index: 1;
-    width: calc(100% + 50px);
+    width: calc(100% + 25px);
 }
+
 .right .title::after{
     position: absolute;
     content: '';
@@ -185,12 +189,13 @@ ul{
 .title .name{
     font-size: 32px;
     text-transform: uppercase;
-    margin: 72px 0 0 0;
+    margin: 55px 0 0 0;
     color: #fff;
 }
 .title .position{
     margin-top: 10px;
-    margin-bottom: 116px;
+    /* margin-bottom: 116px; */
+    margin-bottom: 71px;
     /* color: #444; */
     color: #eeeeee;
 }
@@ -224,13 +229,22 @@ ul{
     font-size: 14.5px;
     font-weight: 600;
     color: #444;
+    float: right;
+    /* margin-right: 20px; */
 }
+
+.from-to::after{
+    clear: both;
+}
+
 .from-to.position{
     font-weight: bold;
     margin-top: 4px;
 }
 .school-name{
-    padding-right: 24px;
+    /* padding-right: 24px; */
+    display: flex;
+    justify-content: space-between;
 }
 
 .experience-container + .experience-container{
@@ -238,13 +252,6 @@ ul{
 }
 .repo-link{
     color: #333;
-}
-.from-to{
-    float: right;
-    margin-right: 20px;
-}
-.from-to::after{
-    clear: both;
 }
 .work-detail-item-start{
     font-weight: bold;
