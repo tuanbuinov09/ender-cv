@@ -4,6 +4,21 @@
 @page {
 }
 body{
+    
+    /* background-color: #ccc; */
+    position: relative;
+}
+
+.main{
+    display: flex;
+    background-color: #fff;
+    /* padding-right: 20px; */
+    /* border: 1px solid #333; */
+    
+    min-width: 210mm;
+    min-height: 297mm;
+    max-width: 100wh;
+    max-height: 100vh;
 }
 
 html{
@@ -24,36 +39,19 @@ ul{
     padding: 0;
     margin: 0;
 }
-p{
-    margin: 0;
-}
-
-.main{
-    background-color: #fff;
-    
-    width: 210mm;
-    height: 297mm;
-    min-width: 210mm;
-    min-height: 297mm;
-    max-width: 100wh;
-    max-height: 100vh;
-}
-
-.flex-container{
-    display: flex;
-}
 
 .left {
     width: 64mm;
     background-color: #333333;
     color: #eee;
-    padding: 12px 16px;
-    min-height: 297mm;
+    padding: 16px 16px;
+    /* height: 7in; */
+    height: 297mm;
+    z-index: 5;
 }
 .info-title{
-    margin: 12px 0 4px 0;
+    margin: 20px 0 4px 0;
     font-size: 18px;
-    color: #333;
 }
 
 .info-title-seperator{
@@ -73,6 +71,10 @@ p{
     display: block;
 }
 
+.personal-info-wrapper{
+    margin-top: 106px;
+}
+
 .link{
     color: #eee;
     transition: all .2s ease-out;
@@ -82,11 +84,9 @@ p{
     color: #1d91df;
     text-decoration: underline;
 }
-
 .info-list {
     list-style-type: none;
 }
-
 .info-item-icon{
     margin-right: 8px;
 }
@@ -101,14 +101,13 @@ p{
     align-items: center;
 }
 .work-detail-item + .work-detail-item{
-    margin-top: 2.2px;
+    margin-top: 2px;
 }
-
 .skill-item{
     display: flex;
+
     flex-direction: column;
 }
-
 .skill-label{
     display: block;
     flex: 1;
@@ -116,7 +115,6 @@ p{
     width: 100%;
     margin-bottom: 6px;
 }
-
 .skill-rating-container{
     display: flex;
     width: 100%;
@@ -135,9 +133,11 @@ p{
     position: relative;
     overflow: hidden;
 }
+
 .circle-filled{
     background-color: white;
 }
+
 .circle-half-filled::after{
     content: '';
     background-color: white;
@@ -150,13 +150,26 @@ p{
 
 .right{
     width: 146mm;
-    padding: 12px 16px;
-    min-height: 297mm;
+    padding: 16px;
+    /* border: 1px solid #333; */
+
 }
 
-.title{
+.right .title{
+    position: relative;
+    z-index: 5;
+    width: calc(100% + 25px);
+}
+
+.right .title::after{
+    position: absolute;
+    content: '';
     background-color: #3c6382;
-    padding: 16px;
+    height: calc(100% + 44px);
+    width: calc(100% + 80mm);
+    top: -25px;
+    left: -80mm;
+    z-index: -2;
 }
 .title .vertical-rectangle-container{
     display: flex;
@@ -166,7 +179,7 @@ p{
     top: 0;
     padding-right: 30px;
 }
-.title .vertical-rectangle-container .vertical-rectangle{
+.vertical-rectangle{
     margin-left: 12px;
     height: 100%;
     width: 12px;
@@ -177,53 +190,63 @@ p{
     text-transform: uppercase;
     margin: 0 0 0 0;
     color: #fff;
+
+    margin-left: -258px;
 }
 .title .position{
     margin-top: 6px;
-    margin-bottom: 0;
+    /* margin-bottom: 116px; */
+    margin-bottom: 45px;
+    /* color: #444; */
     color: #eeeeee;
-}
 
+    margin-left: -258px;
+
+}
 .experience-item{
     display: flex;
     margin-top: 16px;
 }
 .experience-item-left{
+    /* flex: 1; */
+    /* margin-right: 10px; */
 }
 .experience-item-right{
+    /* flex: 3.5; */
+    /* margin-left: 30px; */
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-
 .work-detail-list{
     padding-left: 20px;
 }
-
 .company-name{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bolder;
     width: 100%;
     margin-bottom: 4px;
     color: #3C6382;
 }
-
 .from-to{
     margin-bottom: 4px;
     font-size: 14px;
     font-weight: 600;
     color: #444;
     float: right;
+    /* margin-right: 20px; */
 }
+
 .from-to::after{
     clear: both;
 }
+
 .from-to.position{
     font-weight: bold;
     margin-top: 4px;
 }
-
 .school-name{
+    /* padding-right: 24px; */
     display: flex;
     justify-content: space-between;
 }
@@ -231,11 +254,9 @@ p{
 .experience-container + .experience-container{
     margin-top: 16px;
 }
-
 .repo-link{
     color: #333;
 }
-
 .work-detail-item-start{
     font-weight: bold;
     color: #333;
